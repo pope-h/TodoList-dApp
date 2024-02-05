@@ -27,7 +27,7 @@ contract TodoList {
         added[_description] = true;
     }
 
-    function set(uint _index, string memory _description) external onlyOwner {
+    function update(uint _index, string memory _description) external onlyOwner {
         ToDo storage item = todos[owner][_index];
         item.description = _description;
         added[_description] = false;
